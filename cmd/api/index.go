@@ -11,7 +11,8 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	fmt.Fprint(w, "{id: 1, title: 2}")
+	name := params.ByName("name")
+	w.Write([]byte(fmt.Sprintf("name%v", name)))
 }
 
 func Hello(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
@@ -23,10 +24,11 @@ func main() {
 	router.GET("/", indexHandler)
 	router.GET("/hello/:name", Hello)
 
-	listener, err := net.Listen("tcp", "")
+	listener, err := net.Listen("tcp", "learn-go-rest.vercel.app")
 	if err != nil {
 		panic(err)
 	}
+
 	server := &http.Server{
 		Handler:      router,
 		WriteTimeout: 15 * time.Second,
