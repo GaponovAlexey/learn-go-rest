@@ -8,18 +8,21 @@ import (
 	"time"
 
 	"github.com/julienschmidt/httprouter"
+	"learn-rest-api/internal/user"
 )
 
 func main() {
 	fmt.Println("create")
 
 	router := httprouter.New()
-  
-	
+
 	handler := user.NewHandler()
+	handler.Register(router)
+
+	start(router)
 }
 
-func Start(router *httprouter.Router) {
+func start(router *httprouter.Router) {
 	listener, err := net.Listen("tcp", ":3000")
 	if err != nil {
 		panic(err)
