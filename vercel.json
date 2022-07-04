@@ -1,8 +1,8 @@
 {
   "version": 2,
   "name": "go-vercel",
-  "builds": "api/index.go",
-  "routes": "cmd/api/index.go",
+  "builds": "go.mod",
+  "routes": "/",
   "build": {
     "env": {
       "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
