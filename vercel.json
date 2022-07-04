@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "cmd/api/index.go"
+      "src": "/(.*)"
+      // "dest": "cmd/api/index.go"
     }
   ],
   "build": {
