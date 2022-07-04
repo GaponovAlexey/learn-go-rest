@@ -10,27 +10,23 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-func indexHandler(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("da"))
-}
-
-func Hello(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	fmt.Fprintf(w, "hello, %s!\n", params.ByName("name"))
-}
 func main() {
-	router := httprouter.New()
+	fmt.Println("create")
 
-	router.GET("/", indexHandler)
-	router.GET("/hello/:name", Hello)
+	router := httprouter.New()
+	handler := user.NewHandler()
+}
+
+func Start(router *httprouter.Router) {
 	listener, err := net.Listen("tcp", ":3000")
 	if err != nil {
 		panic(err)
 	}
+
 	server := &http.Server{
 		Handler:      router,
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
 	log.Fatal(server.Serve(listener))
-
 }
