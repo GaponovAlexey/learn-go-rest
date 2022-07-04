@@ -4,8 +4,6 @@
   "builds": [
     {
       "src": "cmd/api/index.go"
-      // "use": "@ardnt/vercel-python-wsgi",
-      // "config": { "maxLambdaSize": "15mb" }
     }
   ],
   "routes": [
