@@ -1,11 +1,7 @@
 {
-  "version": 2,
-  "name": "go-vercel",
-  "builds": [{ "cmd": "/cmd/api/index.go" }],
-  "routes": "go.mod",
-  "build": {
-    "env": {
-      "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
-    }
-  }
+  "builds": [{ "src": "cmd/**/*.go", "use": "@now/go" }],
+  "env": {
+    "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/cmd" }]
 }
