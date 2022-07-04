@@ -1,6 +1,7 @@
 package user
 
 import (
+	"learn-rest-api/internal/handlers"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
@@ -12,8 +13,8 @@ const (
 )
 
 type handler struct {
-
 }
+
 // var _ handlers.Handler = &handler{}
 
 func NewHandler() handlers.Handler {
