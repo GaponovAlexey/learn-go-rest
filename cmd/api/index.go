@@ -23,7 +23,7 @@ func main() {
 	router.GET("/", indexHandler)
 	router.GET("/hello/:name", Hello)
 
-	listener, err := net.Listen("tcp", "learn-go-rest.vercel.app")
+	listener, err := net.Listen("tcp", "")
 	if err != nil {
 		panic(err)
 	}
