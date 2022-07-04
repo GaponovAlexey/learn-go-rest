@@ -23,7 +23,7 @@ func NewHandler() handlers.Handler {
 
 func (h *handler) Register(router *httprouter.Router) {
 	router.GET(usersURL, h.GetList)
-	router.POST(userURL, h.CreateUser)
+	router.POST(usersURL, h.CreateUser)
 	router.GET(userURL, h.GetUserByUUID)
 	router.PUT(userURL, h.UpdateUser)
 	router.PATCH(userURL, h.PartiallyUpdateUser)
