@@ -2,7 +2,7 @@
   "version": 2,
   "name": "go-vercel",
   "builds": "go.mod",
-  "routes": "/",
+  "routes": "go.mod",
   "build": {
     "env": {
       "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
