@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "go-vercel",
-  "builds": "go.mod",
+  "builds": [{ "cmd": "/cmd/api/index.go" }],
   "routes": "go.mod",
   "build": {
     "env": {
