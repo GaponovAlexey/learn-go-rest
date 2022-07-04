@@ -17,9 +17,9 @@ func indexHandler(w http.ResponseWriter, r *http.Request, params httprouter.Para
 func Hello(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	fmt.Fprintf(w, "hello, %s!\n", params.ByName("name"))
 }
-
 func main() {
 	router := httprouter.New()
+
 	router.GET("/", indexHandler)
 	router.GET("/hello/:name", Hello)
 	listener, err := net.Listen("tcp", ":3000")
