@@ -3,14 +3,14 @@
   "name": "learn-nest",
   "builds": [
     {
-      "src": "cmd/api/index.go",
+      "src": "go.mod",
       "use": "@vercel/go"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "cmd/api/index.go",
+      "dest": "go.mod",
       "methods": ["GET", "POST", "PUT", "DELETE"]
     }
   ]
