@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "learn-nest",
+  "name": "learn-go",
   "builds": [
     {
       "cmd": "go.mod",
