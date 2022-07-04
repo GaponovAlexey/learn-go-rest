@@ -3,19 +3,14 @@
   "name": "learn-go",
   "builds": [
     {
-      "cmd": "go.mod",
+      "cmd": "cmd/api/index.go",
       "use": "@vercel/go"
     }
   ],
   "routes": [
     {
       "cmd": "/(.*)",
-      "dest": "go.mod"
+      "dest": "cmd/api/index.go"
     }
-  ],
-  "build": {
-    "env": {
-      "GO_BUILD_FLAGS": "-ldflags '-s -w'"
-    }
-  }
+  ]
 }
