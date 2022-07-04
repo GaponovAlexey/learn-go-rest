@@ -1,5 +1,5 @@
 {
-  "builds": [{ "src": "cmd/**/*.go", "use": "@now/go" }],
+  "builds": [{ "src": "cmd/**/*.go", "use": "/cmd/api/index.go" }],
   "env": {
     "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
   },
