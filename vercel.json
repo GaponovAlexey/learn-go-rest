@@ -1,16 +1,7 @@
 {
-  "version": 2,
-  "name": "learn-go",
-  "builds": [
-    {
-      "cmd": "cmd/api/index.go",
-      "use": "@vercel/go"
+  "build": {
+    "env": {
+      "GIT_CREDENTIALS": "https://gaponovalexey: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@github.com"
     }
-  ],
-  "routes": [
-    {
-      "cmd": "/(.*)",
-      "dest": "cmd/api/index.go"
-    }
-  ]
+  }
 }
