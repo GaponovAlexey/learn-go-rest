@@ -13,10 +13,10 @@ import (
 
 func main() {
 	fmt.Println("create router")
-
 	router := httprouter.New()
-
+	
 	fmt.Println("Register user Handler")
+
 	handler := user.NewHandler()
 	handler.Register(router)
 
