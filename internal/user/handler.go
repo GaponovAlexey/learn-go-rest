@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	"learn-rest-api/internal/handlers"
 	"net/http"
 
@@ -32,7 +33,8 @@ func (h *handler) Register(router *httprouter.Router) {
 
 //method GetList signature
 func (h *handler) GetList(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is get users"))
+
+	w.Write([]byte(fmt.Sprintf("%+v", params)))
 }
 
 func (h *handler) CreateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
